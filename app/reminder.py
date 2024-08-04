@@ -59,7 +59,7 @@ async def set_reminder(message: types.Message):
                              f'Напомню о ней в {remind_time.strftime("%H:%M %d/%m/%Y")}')
 
     await asyncio.sleep(duration.total_seconds())
-    await message.reply(text=f'Задача #{message_from_user}')
+    await message.reply(text=f'Задача #{last_message}')
 
 
 @reminder_router.message()
